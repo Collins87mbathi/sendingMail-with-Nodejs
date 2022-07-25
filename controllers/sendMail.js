@@ -12,7 +12,7 @@ router.post('/', async (req,res) => {
     });
      const mailOptions = {
         from: `${req.body.email}`,
-        to:"interwoodcraftsuperinteriors@gmail.com",
+        to:`${process.env.ADMIN}`,
         subject: `Message from ${req.body.name} : ${req.body.email}`,
         html: `
         <div style="max-width: 700px; margin:auto; border: 10px solid #5651e5; padding: 50px 20px; font-size: 110%;">
