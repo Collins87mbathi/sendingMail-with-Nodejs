@@ -13,7 +13,7 @@ router.post('/', async (req,res) => {
      const mailOptions = {
         from: `${req.body.email}`,
         to:`${process.env.ADMIN}`,
-        subject: `Message from ${req.body.name} : ${req.body.email}`,
+        subject: `Message from ${req.body.name}`,
         html: `
         <div style="max-width: 700px; margin:auto; border: 10px solid #5651e5; padding: 50px 20px; font-size: 110%;">
         <p>${req.body.message}</p>
