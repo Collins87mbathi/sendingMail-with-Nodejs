@@ -11,16 +11,16 @@ router.post('/', async (req,res) => {
         }
     });
      const mailOptions = {
-        from: `${req.body.email}`,
-        to:"bryanheri2023@gmail.com",
+        from:"bryanheri2023@gmail.com",
+        to:`${req.body.email}`,
         subject: `Message from ${req.body.name}`,
         html: `
-        <div style="max-width: 700px; margin:auto; font-size: 110%;">
+        <div style="margin:auto; font-size: 110%;">
         <p>${req.body.message}</p>
          </div>`
      }
 
-    await transporter.sendMail(mailOptions, (error, info) => {
+     transporter.sendMail(mailOptions, (error, info) => {
       if(error) {
         console.log(error);
         res.status(500).send(error);
