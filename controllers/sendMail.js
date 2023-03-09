@@ -6,16 +6,16 @@ router.post('/', async (req,res) => {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-         user:process.env.USER,
-         pass:process.env.PASS
+         user:"bryanheri2023@gmail.com",
+         pass:"eccgjrpruyrrudkf"
         }
     });
      const mailOptions = {
         from: `${req.body.email}`,
-        to:`${process.env.USER}`,
+        to:"bryanheri2023@gmail.com",
         subject: `Message from ${req.body.name}`,
         html: `
-        <div style="max-width: 700px; margin:auto; border: 10px solid #5651e5; padding: 50px 20px; font-size: 110%;">
+        <div style="max-width: 700px; margin:auto; font-size: 110%;">
         <p>${req.body.message}</p>
          </div>`
      }
