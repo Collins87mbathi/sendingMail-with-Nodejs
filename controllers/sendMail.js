@@ -11,8 +11,8 @@ router.post('/', async (req,res) => {
         }
     });
      const mailOptions = {
-        from:"bryanheri2023@gmail.com",
-        to:`${req.body.email}`,
+        from:`${req.body.email}`,
+        to:"bryanheri2023@gmail.com",
         subject: `Message from ${req.body.name}`,
         html: `
         <div style="margin:auto; font-size: 110%;">
